@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>柔性衰减的表单提交</title>
+	<script>
+		function doSubmit(inForm) {
+			if(inForm.firstName.value == "") {
+				alert("you must enter a first name");
+				return false;
+			}
+			if(inForm.lastName.value == "") {
+				console.log("you must enter a lastname");
+				return false;
+			}
+			inForm.submit();
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<!-- 在禁用javascript时也能正确提交 -->
+	<form action="#" name = "test" method="post" onSubmit = "return doSubmit(this);">
+		FirstName: <input type="text" name="firstName">
+		LastName: <input type="text" name="lastName">
+		<br>
+		<input type="submit"  value="submit">
+
+	</form>
+</body>
+</html>

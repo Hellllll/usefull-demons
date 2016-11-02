@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>...</title>
+</head>
+<body>
+	<img src="../../task/" alt="">
+	<script>
+		$ = function(){ alert('not jQuery!');};
+		(function($){
+			$('img').on('click', function(event){
+				$(event.target).addClass('clickedOn');
+			})
+		})(jQuery);
+	</script>
+</body>
+</html>

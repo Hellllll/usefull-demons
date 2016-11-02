@@ -1,0 +1,16 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	        border-radius: $radius;
+}
+@mixin margin-cen($margin-top,$margin-bottom){
+    margin-left: $margin-top auto $margin-bottom;
+    margin-right: $margin-top auto $margin-bottom;
+}
+@mixin opacity($opacity:.5){
+    fliter:alpha(opacity=$opacity*100);
+    -khtml-opacity: $opacity; /* khtml, old safari */
+      -moz-opacity: $opacity; /* mozilla, netscape */
+           opacity: $opacity; /* fx, safari, opera */
+}

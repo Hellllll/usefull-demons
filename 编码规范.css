@@ -1,0 +1,89 @@
+//图片放大缩小
+img {
+	cursor: zoom-in;
+	cursor: zoom-out;
+}
+//媒体查询（Media query）的位置
+//尽可能放在相关规则的附近
+@media (max-width: 768px) {
+	.element {...}	
+}
+
+
+//font，transition，animation属性简写规则,一次性写完所需的属性
+
+//字体
+body {
+	font: italic bold 12px/30px arial,sans-serif; 
+	//font-style,font-weight,font-size/line-height,font-family;
+}
+//css3过渡元素
+div {
+	//使用所有过渡属性
+	transition: width 1s linear 2s; 
+	// 简写属性，变化时间，时间曲线，规定效果何时开始
+	width: 100px;
+	height: 100px;
+	background: yellow;
+	transition: width 2s,height 2s;
+	-moz-transition: width 2s,height 2s, -moz-transform 2s;
+	-webkit-transition: width 2s,height 2s, -webkit-transform 2s;
+	-o-transition: width 2s, height 2s, -o-transform 2s;
+}
+div:hover {
+	width: 200px;
+	height: 200px;
+	transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+}
+//css3动画
+//定义动画类型
+@keyframes myfirst {
+	0% { background: red; left: 0px; top: 0px;}
+	25% { background: yellow; left: 200px; top: 0px;}
+	50% { background: blue; left: 200px; top: 200px; }
+	75% { background: red; left: 0; top: 200px; }
+	100% { background: red; left: 0px; top: 0px;}
+}
+div {
+		    animation: mafirst 5s linear 2s infinite alternate;
+	   -moz-animation: mafirst 5s linear 2s infinite alternate;
+	-webkit-animation: mafirst 5s linear 2s infinite alternate;
+	     -o-animation: mafirst 5s linear 2s infinite alternate;
+}
+
+//正确使用display属性
+
+//图片图标高分辨率适配
+
+//避免空连接属性
+
+//精简html代码
+1.语义化标签
+2.功能性标签
+3.新的输入控件类型
+4.新属性 async，target，placeholder，required，
+autofocus
+？？5.标签自定义属性
+
+//显示指定文档字符集，字符集编码一般在http响应头中
+
+//结构化html，调整加载顺序
+1.首先加载网页的主要内容
+
+2.不可继承的属性：position，display，float等
+
+3.避免使用css表达式和滤镜
+expression与javascript关联起来
+
+4.css中图片处理，不给图片设置不符合自身的尺寸
+
+5.学会使用css雪碧图的小工具（将雪碧图权重做分离，
+全局/框架级的和局部/模块级的分离）
+
+//最佳实践
+1.使用flexbox替代老的布局模型
+
+2.在编写sass和html时，注意容器与内容分离

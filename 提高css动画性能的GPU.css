@@ -1,0 +1,21 @@
+//属性：
+-webkit-transform: transition3d(0,0,0);
+//或者：
+-webkit-transform: translateZ(0);
+//上面两个属性都会开启GPU硬件加速模式
+//可以让浏览器在渲染动画时从CPU转向GPU
+
+//兼容用的
+
+webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+-ms-transform: translateZ(0);
+-o-transform: translateZ(0);
+transform: translateZ(0);
+
+或
+webkit-transform: translate3d(0,0,0);
+-moz-transform: translate3d(0,0,0);
+-ms-transform: translate3d(0,0,0);
+-o-transform: translate3d(0,0,0);
+transform: translate3d(0,0,0);
